@@ -2,7 +2,6 @@
 Python code using PySimpleGUI to create packing lists
 
 Table of Contents
-How to use:
 1.1	Make an order in OSPOS
 1.2	Copy detailed description from OSPOS
 1.3	Insert the detailed description into the order file
@@ -10,15 +9,14 @@ How to use:
 1.5	Fill in all the necessary additional information and designated the correct pathways
 1.6	Create the packing list
 1.7	Check the packing list for mistakes
-
 Troubleshoot
 Required files:	
 Additional script/folder:	
-1. Packing list log.xlsx
-2. Order file.xlsx
-3. JETA Packing list customer info.xlsx
-4. Mother-packing-list.docx
-5. Recompile code
+2.1 Packing list log.xlsx
+2.2 Order file.xlsx
+2.3 JETA Packing list customer info.xlsx
+2.4 Mother-packing-list.docx
+2.5 Recompile code
 
 
  
