@@ -1,24 +1,5 @@
 # JETA_packing_list_creator
 Python application using PySimpleGUI to create packing lists from [Open Source Point of Sale](https://github.com/opensourcepos/opensourcepos) order info
-
-# Table of Contents
-###### [1.1	Make an order in OSPOS](#1.1)
-###### [1.2	Copy detailed description from OSPOS](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#12copy-detailed-description-from-ospos-1)
-###### [1.3	Insert the detailed description into the order file](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#13insert-the-detailed-description-into-the-order-file-1)
-###### [1.4	Open JETA_Packing_list_creator](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#14open-jeta_packing_list_creator-1)
-###### [1.5	Fill in all the necessary additional information and designated the correct pathways](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#15fill-in-all-the-necessary-additional-information-and-designated-the-correct-pathways-1)
-###### [1.6	Create the packing list](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#16create-the-packing-list-1)
-###### [1.7	Check the packing list for mistakes](#1.7)
-## Troubleshoot
-###### Required files:	
-###### Additional script/folder:	
-###### [2.1 Packing list log.xlsx](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#21-packing-list-logxlsx-1)
-###### [2.2 Order file.xlsx](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#22-order-filexlsx-1)
-###### [2.3 JETA Packing list customer info.xlsx](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#23-jeta-packing-list-customer-infoxlsx-1)
-###### [2.4 Mother-packing-list.docx](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#24-mother-packing-listdocx-1)
-###### [2.5 Recompile code](https://github.com/JTaal/JETA_packing_list_creator/edit/main/README.md#25-recompile-code-1)
-
-
  
 # How to use
 
@@ -164,7 +145,7 @@ After the key “DISPLAY_NAME” all headers will be placed from left to right i
 ##### 4.	Mother-packing-list.docx 
 
 The mother packing list is the template that is later rendered into a usable packing list. All the items/information that will be rendered is designated with a key inside of a dictionary. These keys can NOT be changed and will break the script when done so. Anything that does not look like {{EXAMPLE}} or {example} can be changed or modified without too much trouble. Be careful though changes made to the mother packing list will influence all subsequent packing lists made. Therefor please make sure to create a copy of the original which has been tested to produce good looking packing lists. 
-## PACKING LIST
+##### PACKING LIST
 The information used to render parts of the packing list are taken from different sources. The sources are further highlighted in the figure below and should be your first reference when troubleshooting unexpected output.
 
 ```jinja
