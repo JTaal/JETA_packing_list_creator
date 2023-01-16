@@ -9,33 +9,33 @@ Navigate to the sales section (figure 2) in the main menu (figure 1) to start ma
 
 ![image](https://user-images.githubusercontent.com/71385957/212678513-2d949d65-d008-4168-a937-487d5dfb90c0.png)
 
-<sub> Figure 1: The main menu in OSPOS </sub>
+<sub> Figure 1. The main menu in OSPOS </sub>
  
-<sub> Figure 2: The sales section with in OSPOS with nothing filled in yet </sub>
+<sub> Figure 2. The sales section with in OSPOS with nothing filled in yet </sub>
  
-<sub> Figure 3: Adding in a customer name which can be selected </sub>
+<sub> Figure 3. Adding in a customer name which can be selected </sub>
 
-<sub> Figure 4: Adding an item to the shopping cart </sub>
+<sub> Figure 4. Adding an item to the shopping cart </sub>
  
-<sub> Figure 5: Finishing the order by entering the register mode: invoice. </sub>
+<sub> Figure 5. Finishing the order by entering the register mode: invoice. </sub>
  
-<sub> Figure 6: Finalising the order by adding the PO number in the comments and the invoice number. To generate the invoice and log the transaction press the invoice button. </sub>
+<sub> Figure 6. Finalising the order by adding the PO number in the comments and the invoice number. To generate the invoice and log the transaction press the invoice button. </sub>
 
 ## 1.2	Copy detailed description from OSPOS
 To get the order information you’ll have to navigate to the reports section in OSPOS. Within this section you’ll see on the top right side of image X that detailed reports section. There you can enter the transactions log which will contain all the orders. You’ll have to adjust the date range to contain the order you made. Figure x shows the date range being changed to “All time”. Navigate to the order you’d like to create a packing list from and press the + icon on the left side of the row. Copy the contents of the order (with or without headers).
  
-<sub> Figure 7: Reports tab within OSPOS and the Detailed reports section with at the top the transactions tab </sub>
+<sub> Figure 7. Reports tab within OSPOS and the Detailed reports section with at the top the transactions tab </sub>
  
-<sub> Figure 8: Within the detailed transactions report adjusting the Date Range to "All time" to reveal all the transactions ever performed </sub>
+<sub> Figure 8. Within the detailed transactions report adjusting the Date Range to "All time" to reveal all the transactions ever performed </sub>
  
-<sub> Figure 9: All the transactions that have been logged with their respective contents. To access the order description you'll have to press the + icon on the left side of the individual rows </sub>
+<sub> Figure 9. All the transactions that have been logged with their respective contents. To access the order description you'll have to press the + icon on the left side of the individual rows </sub>
 
-<sub> Figure 10: The opened order that was made and all its contents being copied. This can be done both with and without headers just make sure that the order file headers are changed properly. Otherwise, you'll be able to find the dictionary with all the hard coded headers in the troubleshoot section. </sub>
+<sub> Figure 10. The opened order that was made and all its contents being copied. This can be done both with and without headers just make sure that the order file headers are changed properly. Otherwise, you'll be able to find the dictionary with all the hard coded headers in the troubleshoot section. </sub>
  
 ## 1.3	Insert the detailed description into the order file
 Simply paste the information copied from the detailed transaction report over to the order file then save(!) and close the file. If you leave the file open, you’ll run into a permission error of python trying to access the file but not being allowed to by windows.
 
-Figure 11: The order content being saved into the order file below the headers. Be sure to check the correct location of the information being pasted and their respective headers. The headers can't be changed since these are hardcoded into the program. Refer to the troubleshooting section to find the dictionary with the headers. </sub>
+Figure 11. The order content being saved into the order file below the headers. Be sure to check the correct location of the information being pasted and their respective headers. The headers can't be changed since these are hardcoded into the program. Refer to the troubleshooting section to find the dictionary with the headers. </sub>
 
 ## 1.4	Open JETA_Packing_list_creator
 Navigate to the JETA_Packing_list_creator folder which you downloaded. Then find the JETA_Packing_list_creator.exe and simply open it. The file should open albeit with a warning telling you the customer list is empty.  
