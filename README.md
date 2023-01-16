@@ -5,7 +5,7 @@ Python application using PySimpleGUI to create packing lists from [Open Source P
 
 Below is a list of all the steps which make up the general use case of this program. This is meant as a guidance not a definitive method of using the program. In the troubleshoot section, the layout and inner workings of the program are explained. Using this information, you could troubleshoot the current method or develop a different one.
 ## 1.1	Make an order in OSPOS
-Navigate to the sales section (figure 2) in the main menu (figure 1) to start making an order. Then add the customer you’d like to send a shipment to on the top right. Then start adding all the items into the shopping cart and give the correct amount and price. If there is an item with multiple different prices, then take them from the virtual locations so that you’ll be able to adjust the prices individually (because the same item is added in as a separate item).
+Navigate to the sales section in the main menu to start making an order. Then add the customer you’d like to send a shipment to, on the top right. Then start adding all the items into the shopping cart and give the correct amount and price. If there is an item with multiple different prices, then take them from the virtual locations so that you’ll be able to adjust the prices individually (because the same item is added in as a separate item).
 
 ![Figure 1  The main menu in OSPOS](https://user-images.githubusercontent.com/71385957/212723686-56cb5d9e-e621-474e-94df-09b49978cab4.PNG)
 <sub> Figure 1. The main menu in OSPOS </sub>
