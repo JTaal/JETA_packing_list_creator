@@ -47,7 +47,8 @@ Simply paste the information copied from the detailed transaction report over to
 
 
 ![image](https://user-images.githubusercontent.com/71385957/212724841-8fed5242-8734-4cde-b93a-0aa612d5f1a9.png)
-Figure 11. The order content being saved into the order file below the headers. Be sure to check the correct location of the information being pasted and their respective headers. The headers can't be changed since these are hardcoded into the program. Refer to the troubleshooting section to find the dictionary with the headers. </sub>
+
+<sub> Figure 11. The order content being saved into the order file below the headers. Be sure to check the correct location of the information being pasted and their respective headers. The headers can't be changed since these are hardcoded into the program. Refer to the troubleshooting section to find the dictionary with the headers. </sub>
 
 ## 1.4	Open JETA_Packing_list_creator
 Navigate to the JETA_Packing_list_creator folder which you downloaded. Then find the JETA_Packing_list_creator.exe and simply open it. The file should open albeit with a warning telling you the customer list is empty.  
@@ -61,8 +62,9 @@ Now simply add all the additional information needed to complete a packing list 
  
 ## 1.7	Check the packing list for mistakes
 As a final control always check the document for any mistakes. If there is something wrong with the items list, then locate which part of the packing list contains the mistakes. Using the figure below you can figure out where the mistake originated from, and you’ll be able to perform the needed corrective actions. 
-
  
+![Troubleshoot picture white background smaller](https://user-images.githubusercontent.com/71385957/212729401-4e0f796a-2eba-473c-8916-1aa571c7eef1.png)
+
 # Troubleshoot
 
 ## Required files:
