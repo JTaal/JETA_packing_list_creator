@@ -2,7 +2,7 @@
 Python code using PySimpleGUI to create packing lists
 
 Table of Contents
-How to use
+How to use:
 1.1	Make an order in OSPOS
 1.2	Copy detailed description from OSPOS
 1.3	Insert the detailed description into the order file
