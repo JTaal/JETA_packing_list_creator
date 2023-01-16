@@ -7,34 +7,46 @@ Below is a list of all the steps which make up the general use case of this prog
 ## [1.1	Make an order in OSPOS](1.1)
 Navigate to the sales section (figure 2) in the main menu (figure 1) to start making an order. Then add the customer you’d like to send a shipment to on the top right. Then start adding all the items into the shopping cart and give the correct amount and price. If there is an item with multiple different prices, then take them from the virtual locations so that you’ll be able to adjust the prices individually (because the same item is added in as a separate item).
 
-![image](https://user-images.githubusercontent.com/71385957/212678513-2d949d65-d008-4168-a937-487d5dfb90c0.png)
-
+![Figure 1  The main menu in OSPOS](https://user-images.githubusercontent.com/71385957/212723686-56cb5d9e-e621-474e-94df-09b49978cab4.PNG)
 <sub> Figure 1. The main menu in OSPOS </sub>
- 
+
+![Figure 2  The sales section with in OSPOS](https://user-images.githubusercontent.com/71385957/212723815-07d26662-6735-45c3-b1bd-6da02cb4667b.PNG)
 <sub> Figure 2. The sales section with in OSPOS with nothing filled in yet </sub>
- 
+
+![Figure 3  Adding in a customer name which can be selected](https://user-images.githubusercontent.com/71385957/212723834-bc5e195b-c52f-424f-97bc-df256c830de5.jpg)
 <sub> Figure 3. Adding in a customer name which can be selected </sub>
 
+![Figure 4  Adding an item to the shopping cart](https://user-images.githubusercontent.com/71385957/212723851-f2b73a2a-ba79-4d44-82d3-7bbd7a7ae36e.png)
 <sub> Figure 4. Adding an item to the shopping cart </sub>
- 
+
+![Figure 5  Finishing the order by entering the register mode invoice](https://user-images.githubusercontent.com/71385957/212723864-bc88e391-0393-45ff-998a-d5b09abaf898.png)
 <sub> Figure 5. Finishing the order by entering the register mode: invoice. </sub>
  
+![FIEF8B~1](https://user-images.githubusercontent.com/71385957/212723877-dd0ceea1-17ad-469d-b4bb-d66aeab9363c.PNG)
+
 <sub> Figure 6. Finalising the order by adding the PO number in the comments and the invoice number. To generate the invoice and log the transaction press the invoice button. </sub>
 
 ## 1.2	Copy detailed description from OSPOS
 To get the order information you’ll have to navigate to the reports section in OSPOS. Within this section you’ll see on the top right side of image X that detailed reports section. There you can enter the transactions log which will contain all the orders. You’ll have to adjust the date range to contain the order you made. Figure x shows the date range being changed to “All time”. Navigate to the order you’d like to create a packing list from and press the + icon on the left side of the row. Copy the contents of the order (with or without headers).
  
+![Figure 7  Reports tab within OSPOS and the Detailed reports section with at the top the transactions tab](https://user-images.githubusercontent.com/71385957/212723888-d68ecaf4-4f83-4f3d-a742-380a1fe605f4.png)
 <sub> Figure 7. Reports tab within OSPOS and the Detailed reports section with at the top the transactions tab </sub>
- 
+
+![FIA9CD~1](https://user-images.githubusercontent.com/71385957/212723907-748d3e74-1d56-45a9-bbec-5ec92f9242c7.PNG)
 <sub> Figure 8. Within the detailed transactions report adjusting the Date Range to "All time" to reveal all the transactions ever performed </sub>
- 
+
+![FIGURE~1](https://user-images.githubusercontent.com/71385957/212723914-6faff870-d944-439b-b4d1-1de4834ae208.JPG)
 <sub> Figure 9. All the transactions that have been logged with their respective contents. To access the order description you'll have to press the + icon on the left side of the individual rows </sub>
 
+![Figure 10  The opened order that was made and all its contents being copied](https://user-images.githubusercontent.com/71385957/212723929-9c1fd6bd-63ad-41cf-9771-50ae22d9abd9.PNG)
 <sub> Figure 10. The opened order that was made and all its contents being copied. This can be done both with and without headers just make sure that the order file headers are changed properly. Otherwise, you'll be able to find the dictionary with all the hard coded headers in the troubleshoot section. </sub>
  
+
 ## 1.3	Insert the detailed description into the order file
 Simply paste the information copied from the detailed transaction report over to the order file then save(!) and close the file. If you leave the file open, you’ll run into a permission error of python trying to access the file but not being allowed to by windows.
 
+
+![image](https://user-images.githubusercontent.com/71385957/212724841-8fed5242-8734-4cde-b93a-0aa612d5f1a9.png)
 Figure 11. The order content being saved into the order file below the headers. Be sure to check the correct location of the information being pasted and their respective headers. The headers can't be changed since these are hardcoded into the program. Refer to the troubleshooting section to find the dictionary with the headers. </sub>
 
 ## 1.4	Open JETA_Packing_list_creator
