@@ -120,7 +120,7 @@ The header is therefor case sensitive (because keys are hashed for faster lookup
 Due to a client requiring us to add their own classification system in terms of an “item code” to the packing list whenever we want to send something to them the following code is executed, to add the “item code”:
 
 ```python
-#Exception made for Turku while generating the items list
+#Special case for adding the item code to the items list
  
 if customername.lower() == "client_name":
  	row_list = row["cols"]
@@ -160,15 +160,13 @@ After the key “DISPLAY_NAME” all headers will be placed from left to right i
 
 The mother packing list is the template that is later rendered into a usable packing list. All the items/information that will be rendered is designated with a key inside of a dictionary. These keys can NOT be changed and will break the script when done so. Anything that does not look like {{EXAMPLE}} or {example} can be changed or modified without too much trouble. Be careful though changes made to the mother packing list will influence all subsequent packing lists made. Therefor please make sure to create a copy of the original which has been tested to produce good looking packing lists. 
 
-##### PACKING LIST
-
 The information used to render parts of the packing list are taken from different sources. The sources are further highlighted in the figure below and should be your first reference when troubleshooting unexpected output.
 
 ```jinja
-To: {{NAME}}	        Date:	       {{DATE}}
-    {{ADDRESS}}	     Invoice:	    {{INVOICE_NR}}
-    {{POSTAL_CODE}}	 PO:	         {{PO}}
-    {{TAX_NR}}	      Description:	{{DESCRIPTION}}
+To: {{NAME}}	        Date:        {{DATE}}
+    {{ADDRESS}}	        Invoice:     {{INVOICE_NR}}
+    {{POSTAL_CODE}}	PO:          {{PO}}
+    {{TAX_NR}}	        Description: {{DESCRIPTION}}
 
             {{SHIPPING_WARNING}}
 
@@ -180,6 +178,10 @@ To: {{NAME}}	        Date:	       {{DATE}}
 
 ## Additional script/folder:
 ##### 1.	Output folder
+
+This is an output folder inside of the repository. 
+Feel free to use anything you'd like you can designate this inside of the program
+
 ##### 2.	CLEAR_PATHWAY_SETTINGS.py
 
 Probably the most common error will be the permission error. This error occurs whenever the script tries to access a file which is already open. This will likely happen when checking the latest packing list and making adjustment while the document is open. The program will automatically restart for you however, your previous input in the “Input Elements” tab will unfortunately be lost. If there are no documents open when this occurs, please check your permissions regarding the files you’re using. 
