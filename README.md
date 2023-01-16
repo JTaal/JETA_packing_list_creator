@@ -122,12 +122,12 @@ The header is therefor case sensitive (because keys are hashed for faster lookup
        ]
 ```
 
-Due to the hospital in Turku requiring us to add their own classification system in terms of an “item code” to the packing list whenever we want to send something to Turku the following code is executed to add the “item code”:
+Due to a client requiring us to add their own classification system in terms of an “item code” to the packing list whenever we want to send something to them the following code is executed, to add the “item code”:
 
 ```python
 #Exception made for Turku while generating the items list
  
-if customername.lower() == "turku":
+if customername.lower() == "client_name":
  	row_list = row["cols"]
  	row_list.insert(1, record["Item_code"])
 ```
@@ -183,7 +183,6 @@ Packed by
 Verified by	
 ```
 
-
 ## Additional script/folder:
 ##### 1.	Output folder
 ##### 2.	CLEAR_PATHWAY_SETTINGS.py
@@ -191,21 +190,6 @@ Verified by
 Probably the most common error will be the permission error. This error occurs whenever the script tries to access a file which is already open. This will likely happen when checking the latest packing list and making adjustment while the document is open. The program will automatically restart for you however, your previous input in the “Input Elements” tab will unfortunately be lost. If there are no documents open when this occurs, please check your permissions regarding the files you’re using. 
  
 A proposed fix might be to run the .exe in administrative mode. You do this by right clicking the .exe and then “Properties”. Check the box next to “Run this program as an administrator in the Compatibility tab.
-
-##### 1. Packing list log.xlsx 
-
-
-
-   
-2. Order file.xlsx
-
-
-3. JETA Packing list customer info.xlsx 
-
-
-
-4. Mother-packing-list.docx
-
 
 ## 2.3	Recompile code
 So, this is a tricky one. If you were to make changes to the code and want to recompile the code using pyinstaller you’ll have to make changes to the code inside of the barcode library. Because your local version will probably still work, however any other computer will fail to render barcodes due to a font error occurring. The fix can be found here:
@@ -226,5 +210,3 @@ To this:
 ```python
 self.font_path = 'arial.ttf' 
 ```
-
-
