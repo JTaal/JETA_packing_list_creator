@@ -28,6 +28,7 @@ Below is a list of all the steps which make up the general use case of this prog
 Navigate to the sales section (figure 2) in the main menu (figure 1) to start making an order. Then add the customer you’d like to send a shipment to on the top right. Then start adding all the items into the shopping cart and give the correct amount and price (customer dependent). If there is an item with multiple different prices, then take them from the virtual locations so that you’ll be able to adjust the prices individually (because the same item is added in as a separate item).
 
 ![image](https://user-images.githubusercontent.com/71385957/212678513-2d949d65-d008-4168-a937-487d5dfb90c0.png)
+
 Figure 1: The main menu in OSPOS
  
 Figure 2: The sales section with in OSPOS with nothing filled in yet
