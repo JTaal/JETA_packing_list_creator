@@ -149,19 +149,17 @@ The mother packing list is the template that is later rendered into a usable pac
 The information used to render parts of the packing list are taken from different sources. The sources are further highlighted in the figure below and should be your first reference when troubleshooting unexpected output.
 
 ```jinja
-To: {{NAME}}	    Date:	{{DATE}}
-{{ADDRESS}}	      Invoice:	{{INVOICE_NR}}
-{{POSTAL_CODE}}	  PO:	{{PO}}
-{{TAX_NR}}	      Description:	{{DESCRIPTION}}
+To: {{NAME}}	        Date:	       {{DATE}}
+    {{ADDRESS}}	     Invoice:	    {{INVOICE_NR}}
+    {{POSTAL_CODE}}	 PO:	         {{PO}}
+    {{TAX_NR}}	      Description:	{{DESCRIPTION}}
 
             {{SHIPPING_WARNING}}
-{%tc for col in col_labels %}	{{ col }}	{%tc endfor %}
-{%tr for item in tbl_contents %}
-{%tc for col in item.cols %}	{{ col }}	{%tc endfor %}
-{%tr endfor %}
 
-Packed by 	
-Verified by	
+{%tc for col in col_labels %}	{{col}}	{%tc endfor %}
+         {%tr for item in tbl_contents %}
+{%tc for col in item.cols %}	{{col}}	{%tc endfor %}
+                {%tr endfor %}
 ```
 
 ## Additional script/folder:
