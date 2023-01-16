@@ -70,21 +70,10 @@ Now simply add all the additional information needed to complete a packing list 
 As a final control always check the document for any mistakes. If there is something wrong with the items list, then locate which part of the packing list contains the mistakes. Using the figure below you can figure out where the mistake originated from, and you’ll be able to perform the needed corrective actions. 
 
  
-Troubleshoot
-Required files:
-1.	Packing list log.xlsx
-2.	Order file.xlsx
-3.	JETA Packing list customer info.xlsx
-4.	Mother-packing-list.docx 
-Additional script/folder:
-1.	Output folder
-2.	CLEAR_PATHWAY_SETTINGS.py
-Probably the most common error will be the permission error. This error occurs whenever the script tries to access a file which is already open. This will likely happen when checking the latest packing list and making adjustment while the document is open. The program will automatically restart for you however, your previous input in the “Input Elements” tab will unfortunately be lost. If there are no documents open when this occurs, please check your permissions regarding the files you’re using. 
- 
-A proposed fix might be to run the .exe in administrative mode. You do this by right clicking the .exe and then “Properties”. Check the box next to “Run this program as an administrator in the Compatibility tab.
-  
+# Troubleshoot
 
-1. Packing list log.xlsx 
+## Required files:
+##### 1.	Packing list log.xlsx
 
 The packing list log is a simple excel sheet which records all the packing lists created. This document could be used to keep a complete record by forcing the users to link their pathway to the same file or individuals could retain the link to their own copies of the packing list log. The program will still function even if the pathway is left blank. Very few problems should arise from this file and if they do you can simply purge the entire file if necessary.
 
@@ -102,8 +91,7 @@ except Exception as exception:
    sg.popup_auto_close("Couldn't open log file!\n\n" + str(exception), keep_on_top=True)
 ```
 
-   
-2. Order file.xlsx
+##### 2.	Order file.xlsx
 
 The barcode format used is EAN13 and requires an integer number of 12 characters casted as a string. Due to data casting, the barcode number absolutely can NOT contain any special characters. The only numbers allowed are.
 •	A 12-character integer or 12-character float.
@@ -144,7 +132,8 @@ if customername.lower() == "turku":
  	row_list.insert(1, record["Item_code"])
 ```
 
-3. JETA Packing list customer info.xlsx 
+##### 3.	JETA Packing list customer info.xlsx
+
 This file is named “3. JETA Packing list customer info.xlsx” and located inside the required files folder.
 For the program to function properly it requires the user to assign the pathway to the customer information. This file needs to contain the headers in the table shown below and especially “DISPLAY_NAME”. If there is a problem with the file, the program will default to empty strings and prompt the user to correct the problem and restart. Without the customer information you’re not able to create a packing list.
  
@@ -171,12 +160,14 @@ user_settings(clear=True)
 
 Note:
 After the key “DISPLAY_NAME” all headers will be placed from left to right in line 1 till 4 within the packing list on the top left. Otherwise as can be seen in the mother packing list, the keys are not specified in lines but rather the Keys shown below.
-4. Mother-packing-list.docx
+
+##### 4.	Mother-packing-list.docx 
+
 The mother packing list is the template that is later rendered into a usable packing list. All the items/information that will be rendered is designated with a key inside of a dictionary. These keys can NOT be changed and will break the script when done so. Anything that does not look like {{EXAMPLE}} or {example} can be changed or modified without too much trouble. Be careful though changes made to the mother packing list will influence all subsequent packing lists made. Therefor please make sure to create a copy of the original which has been tested to produce good looking packing lists. 
 ## PACKING LIST
 The information used to render parts of the packing list are taken from different sources. The sources are further highlighted in the figure below and should be your first reference when troubleshooting unexpected output.
 
-
+```jinja
 To: {{NAME}}	    Date:	{{DATE}}
 {{ADDRESS}}	      Invoice:	{{INVOICE_NR}}
 {{POSTAL_CODE}}	  PO:	{{PO}}
@@ -190,6 +181,31 @@ To: {{NAME}}	    Date:	{{DATE}}
 
 Packed by 	
 Verified by	
+```
+
+
+## Additional script/folder:
+##### 1.	Output folder
+##### 2.	CLEAR_PATHWAY_SETTINGS.py
+
+Probably the most common error will be the permission error. This error occurs whenever the script tries to access a file which is already open. This will likely happen when checking the latest packing list and making adjustment while the document is open. The program will automatically restart for you however, your previous input in the “Input Elements” tab will unfortunately be lost. If there are no documents open when this occurs, please check your permissions regarding the files you’re using. 
+ 
+A proposed fix might be to run the .exe in administrative mode. You do this by right clicking the .exe and then “Properties”. Check the box next to “Run this program as an administrator in the Compatibility tab.
+
+##### 1. Packing list log.xlsx 
+
+
+
+   
+2. Order file.xlsx
+
+
+3. JETA Packing list customer info.xlsx 
+
+
+
+4. Mother-packing-list.docx
+
 
 ## 2.3	Recompile code
 So, this is a tricky one. If you were to make changes to the code and want to recompile the code using pyinstaller you’ll have to make changes to the code inside of the barcode library. Because your local version will probably still work, however any other computer will fail to render barcodes due to a font error occurring. The fix can be found here:
