@@ -159,7 +159,9 @@ After the key “DISPLAY_NAME” all headers will be placed from left to right i
 ##### 4.	Mother-packing-list.docx 
 
 The mother packing list is the template that is later rendered into a usable packing list. All the items/information that will be rendered is designated with a key inside of a dictionary. These keys can NOT be changed and will break the script when done so. Anything that does not look like {{EXAMPLE}} or {example} can be changed or modified without too much trouble. Be careful though changes made to the mother packing list will influence all subsequent packing lists made. Therefor please make sure to create a copy of the original which has been tested to produce good looking packing lists. 
+
 ##### PACKING LIST
+
 The information used to render parts of the packing list are taken from different sources. The sources are further highlighted in the figure below and should be your first reference when troubleshooting unexpected output.
 
 ```jinja
