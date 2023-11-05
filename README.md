@@ -89,8 +89,7 @@ except Exception as exception:
 ##### 2.	Order file.xlsx
 
 The barcode format used is EAN13 and requires an integer number of 12 characters casted as a string. Due to data casting, the barcode number absolutely can NOT contain any special characters. The only numbers allowed are.
-•	A 12-character integer or 12-character float.
-o	012345678912 & 012345678912.0000
+•	A 12-character integer or 12-character float.	012345678912 & 012345678912.0000
 The barcode is checked and cast according to the code below. A float is bottom rounded to an integer and then converted to a string.
 
 ```python
@@ -144,7 +143,7 @@ import PySimpleGUI as sg
 def user_settings(filename = "user_settings.json", path = os.path.dirname(os.path.realpath(__file__)), clear = False):    
     sg.user_settings_filename(filename, path=path)
     if clear == True:
-        clear_dict = {"Clear History log": "-path_log-", "Clear History order": "-path_order-", "Clear History customer": "-path_customer-", "Clear History output":                       "-path_output-", "Clear History mother": "-path_mother-"}
+        clear_dict = {"Clear History log": "-path_log-", "Clear History order": "-path_order-", "Clear History customer": "-path_customer-", "Clear History output": "-path_output-", "Clear History mother": "-path_mother-"}
         for key in clear_dict:
             sg.user_settings_set_entry(clear_dict[key], [])
         print("Clearing setting files executed!")
